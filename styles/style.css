@@ -121,6 +121,10 @@ body {
     .my-img {
         width: 100%;
     }
+
+    .contacts {
+        margin-bottom: 15px
+    }
 }
 
 @media only screen and (max-width: 570px) {
