@@ -1,0 +1,136 @@
+body {
+    font-family: "Avenir Next Cyr Medium", sans-serif;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #cacaca;
+}
+
+.main {
+    display: flex;
+    background-color: #ffffff;
+    box-shadow: 0 8px 6px -6px black;
+    margin: 70px;
+}
+
+.my-img {
+    width: 320px;
+    display: block;
+}
+
+.my-info {
+    padding: 30px 20px;
+    background-color: #4f5957;
+}
+
+.info {
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 33px;
+}
+
+.name {
+    font-size: 20px;
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+
+.my-idea {
+    font-size: 13px;
+    font-style: italic;
+    color: #ffffff;
+    line-height: 20px;
+    max-width: 200px;
+    margin-top: 30px;
+}
+
+.biography {
+    height: 67vh;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.biography-title {
+    font-size: 22px;
+    color: #4f5957;
+    font-weight: bold;
+    border-bottom: 2px solid;
+    margin: 20px 0;
+}
+
+.educational-info div {
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.size {
+    font-size: 15px;
+}
+
+.educational-info div span:last-child {
+    min-width: 100px;
+    padding-left: 10px
+}
+
+.sub-content div {
+    line-height: 30px;
+}
+
+.contacts {
+    text-align: end;
+    margin: 35px 0 20px;
+}
+
+.contacts div {
+    font-weight: bold;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.contacts div img {
+    padding-right: 5px;
+}
+
+.contact {
+    font-size: 22px;
+    color: #4f5957;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4f5957;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3f4846;;
+}
+
+@media only screen and (max-width: 900px) {
+    .main {
+        display: block;
+    }
+
+    .my-img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .main {
+        margin: 10px;
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    .size {
+        font-size: 12px;
+    }
+}
