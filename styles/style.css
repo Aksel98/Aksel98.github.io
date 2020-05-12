@@ -122,6 +122,10 @@ body {
         width: 100%;
     }
 
+    .my-idea {
+        max-width: unset;
+    }
+
     .contacts {
         margin-bottom: 15px
     }
