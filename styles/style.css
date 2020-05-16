@@ -7,6 +7,7 @@ body {
 
 .main {
     display: flex;
+    height: 610px;
     background-color: #ffffff;
     box-shadow: 0 8px 6px -6px black;
     margin: 70px;
@@ -18,7 +19,7 @@ body {
 }
 
 .my-info {
-    padding: 30px 20px;
+    padding: 28px 20px;
     background-color: #4f5957;
 }
 
@@ -44,7 +45,6 @@ body {
 }
 
 .biography {
-    height: 63vh;
     overflow: auto;
     padding: 0 20px;
 }
@@ -116,6 +116,7 @@ body {
 @media only screen and (max-width: 900px) {
     .main {
         display: block;
+        height: unset;
     }
 
     .my-img {
