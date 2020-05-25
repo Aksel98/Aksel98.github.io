@@ -127,4 +127,8 @@ body {
     .main {
         margin: 70px 10px;
     }
+
+    .tasks-input button {
+        width: 40%;
+    }
 }
