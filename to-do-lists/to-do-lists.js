@@ -54,5 +54,5 @@ function checkTask(event) {
 
 function buttonDisable() {
     addButton.disabled = true
-    taskInput.oninput = () => addButton.disabled = false
+    taskInput.oninput = () => taskInput.value ? addButton.disabled = false : addButton.disabled = true
 }
