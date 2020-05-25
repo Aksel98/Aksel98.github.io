@@ -65,7 +65,7 @@ body {
 }
 
 #tasks {
-    height: 579px;
+    max-height: 520px;
     overflow: auto;
 }
 

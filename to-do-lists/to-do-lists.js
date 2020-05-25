@@ -33,6 +33,12 @@ function addTask() {
     }
 }
 
+taskInput.onkeydown = (e) => {
+    if (e.key === 'Enter') {
+        addTask()
+    }
+}
+
 function deleteTask(event) {
     event.closest('.task').remove()
     window.localStorage.setItem('tasks', tasks.innerHTML)
