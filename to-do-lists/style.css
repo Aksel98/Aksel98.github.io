@@ -122,3 +122,9 @@ body {
     border-radius: 5px;
     background: #02bbec;
 }
+
+@media only screen and (max-width: 570px) {
+    .main {
+        margin: 70px 10px;
+    }
+}
