@@ -1,10 +1,12 @@
 const taskInput = document.getElementById('task-input')
+const searchInput = document.getElementById('search-task')
 const tasks = document.getElementById('tasks')
 tasks.innerHTML = localStorage.getItem('tasks')
 const addButton = document.getElementById('add-button')
 let isUnique = true
 
 buttonDisable()
+showAllTasks()
 
 function addTask() {
     isUnique = true
@@ -33,18 +35,13 @@ function addTask() {
     }
 }
 
-taskInput.onkeydown = (e) => {
-    if (e.key === 'Enter') {
-        addTask()
-    }
-}
-
 function deleteTask(event) {
     event.closest('.task').remove()
     window.localStorage.setItem('tasks', tasks.innerHTML)
 }
 
 function checkTask(event) {
+    event.closest('.task').classList.toggle('done-task')
     const taskName = event.closest('.task').querySelector('.task-name')
     let uncheckedImg = event.closest('.task').querySelector('.unchecked')
     taskName.classList.toggle('line-through')
@@ -52,7 +49,31 @@ function checkTask(event) {
     window.localStorage.setItem('tasks', tasks.innerHTML)
 }
 
+function searchTask() {
+    const tasks = document.getElementsByClassName('task-name')
+    Array.from(tasks).forEach(el => {
+        if (!el.innerText.includes(searchInput.value) && searchInput.value) {
+            el.closest('.task ').classList.add('task-display')
+        } else {
+            el.closest('.task ').classList.remove('task-display')
+        }
+    })
+}
+
+function showAllTasks() {
+    Array.from(document.getElementsByClassName('task ')).forEach(el => {
+        el.classList.remove('task-display')
+    })
+}
+
 function buttonDisable() {
     addButton.disabled = true
     taskInput.oninput = () => taskInput.value ? addButton.disabled = false : addButton.disabled = true
+}
+
+taskInput.onkeydown = (e) => {
+    taskInput.classList.remove('danger-border')
+    if (e.key === 'Enter') {
+        addTask()
+    }
 }
