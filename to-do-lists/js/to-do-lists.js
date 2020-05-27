@@ -12,8 +12,8 @@ function addTask() {
     isUnique = true
     const task = document.createElement('div')
     const taskName = document.createElement('div')
-    task.innerHTML = '<img src="img/icons/delete-icon.png" class="icon delete-icon" onclick="deleteTask(this)">'
-    task.innerHTML += '<img src="img/icons/unchecked.png" class="icon unchecked" onclick="checkTask(this)">'
+    task.innerHTML = '<img src="../img/icons/delete-icon.png" class="icon delete-icon" onclick="deleteTask(this)">'
+    task.innerHTML += '<img src="../img/icons/unchecked.png" class="icon unchecked" onclick="checkTask(this)">'
     const uniqueTitles = document.getElementsByClassName('task-name')
     Array.from(uniqueTitles).forEach(val => {
         if (taskInput.value === val.innerText) {
