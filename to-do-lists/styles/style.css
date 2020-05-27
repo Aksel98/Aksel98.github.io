@@ -142,7 +142,7 @@ body {
     background: #02bbec;
 }
 
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 570px ), (max-height: 570px ) {
 
     #tasks {
         height: calc(100vh - 260px);
