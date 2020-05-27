@@ -4,6 +4,7 @@ body {
     height: calc(100vh - 70px);
     margin: 0 auto;
     background: linear-gradient(-135deg,#0642ba,#02bbec);
+    overflow: hidden;
 }
 
 .main {
