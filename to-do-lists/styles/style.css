@@ -153,10 +153,20 @@ body {
     }
 
     .title {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .tasks-input button {
         width: 40%;
+    }
+}
+
+@media only screen and (max-height: 570px ) {
+    #tasks {
+        height: calc(100vh - 200px);
+    }
+
+    .task, .task-input, #add-button {
+        padding: 5px;
     }
 }
