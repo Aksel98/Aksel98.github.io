@@ -4,6 +4,7 @@ const tasks = document.getElementById('tasks')
 tasks.innerHTML = localStorage.getItem('tasks')
 const addButton = document.getElementById('add-button')
 let isUnique = true
+let timeOutId;
 
 buttonDisable()
 showAllTasks()
@@ -49,16 +50,22 @@ function checkTask(event) {
     window.localStorage.setItem('tasks', tasks.innerHTML)
 }
 
+searchInput.oninput = function() {
+    clearTimeout(timeOutId);
+    timeOutId = setTimeout(searchTask, 800);
+}
+
 function searchTask() {
     const tasks = document.getElementsByClassName('task-name')
-    Array.from(tasks).forEach(el => {
-        if (!el.innerText.includes(searchInput.value) && searchInput.value) {
-            el.closest('.task ').classList.add('task-display')
-        } else {
-            el.closest('.task ').classList.remove('task-display')
-        }
-    })
+        Array.from(tasks).forEach(el => {
+            if (!el.innerText.includes(searchInput.value) && searchInput.value) {
+                el.closest('.task ').classList.add('task-display')
+            } else {
+                el.closest('.task ').classList.remove('task-display')
+            }
+        })
 }
+
 
 function showAllTasks() {
     Array.from(document.getElementsByClassName('task ')).forEach(el => {
