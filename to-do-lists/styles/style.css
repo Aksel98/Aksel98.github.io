@@ -1,13 +1,15 @@
 body {
     font-family: "Avenir Next Cyr Medium", sans-serif;
     max-width: 1400px;
+    height: calc(100vh - 70px);
     margin: 0 auto;
-    background-color: #cacaca;
+    background: linear-gradient(-135deg,#0642ba,#02bbec);
 }
 
 .main {
     background-color: #ffffff;
     box-shadow: 0 8px 6px -6px black;
+    border-radius: 20px;
     margin: 70px;
     padding: 0 15px;
 }
@@ -22,6 +24,7 @@ body {
     font-size: 45px;
     color: #02bbec;
     text-align: center;
+    padding-top: 15px;
 }
 
 .tasks-input {
@@ -31,7 +34,7 @@ body {
 
 .search-input {
     width: 100% !important;
-    background: cadetblue;
+    background: #02bbec;
     border-radius: 10px !important;
     margin: 10px 0;
 }
