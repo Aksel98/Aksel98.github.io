@@ -1,7 +1,7 @@
 body {
     font-family: "Avenir Next Cyr Medium", sans-serif;
     max-width: 1400px;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 100px);
     margin: 0 auto;
     background: linear-gradient(-135deg,#0642ba,#02bbec);
     overflow: hidden;
@@ -14,7 +14,7 @@ body {
     position: relative;
     background-color: #ffffff;
     text-align: center;
-    margin: 70px auto;
+    margin: 50px auto;
     max-width: 1000px;
     box-shadow: 0 8px 6px -6px black;
 }
