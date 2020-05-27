@@ -144,8 +144,12 @@ body {
 }
 
 @media only screen and (max-width: 570px) {
+    body {
+        height: calc(100vh - 30px);
+    }
+
     .main {
-        margin: 70px 10px;
+        margin: 30px 15px;
     }
 
     .title {
