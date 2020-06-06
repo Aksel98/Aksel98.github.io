@@ -161,7 +161,7 @@ function removeRaw() {
             }
         }
     }
-    scoreId.value = removeRawCount > 0 ? removeRawCount * (+scoreId.value + (1100 - gameSpeed)) : scoreId.value
+    scoreId.value = removeRawCount > 0 ? +scoreId.value + (removeRawCount * (1100 - gameSpeed)) : scoreId.value
 }
 
 (function moveForwardToDown() {
