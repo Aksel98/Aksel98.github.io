@@ -204,7 +204,7 @@ function endGame() {
     if (columns[1].includes(2) || columns[2].includes(2)) {
         figure.x = 0
         figure.y = 0
-        endModal.style.opacity = '1'
+        endModal.style.display = 'block'
         pauseIcon.style.display = 'none'
         clearInterval(intervalID)
         columns = new Array(20).fill([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]).map(el => [...el])
@@ -218,7 +218,7 @@ function reStartGame() {
     figure.y = 0
     drawColumns()
     startGame()
-    endModal.style.opacity = '0'
+    endModal.style.display = 'none'
     pauseIcon.classList.remove('start-icon')
     scoreId.value = 0
 }
